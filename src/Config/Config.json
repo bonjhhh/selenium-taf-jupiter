@@ -1,0 +1,6 @@
+{
+    "WebDriver": {
+        "TimeoutInSeconds": 30,
+        "PollingIntervalInSeconds": 0.5
+    }
+}

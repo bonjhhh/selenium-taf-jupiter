@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumTestFramework.src.Config;
 using System;
 
 namespace SeleniumTestFramework.src.Pages
@@ -12,7 +13,12 @@ namespace SeleniumTestFramework.src.Pages
         public BasePage(IWebDriver driver)
         {
             _driver = driver;
-            _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            _wait = new WebDriverWait(
+                _driver, 
+                TimeSpan.FromSeconds(ConfigurationHelper.GetWebDriverTimeoutSeconds()))
+            {
+                PollingInterval = TimeSpan.FromSeconds(ConfigurationHelper.GetWebDriverPollingIntervalSeconds())
+            };
         }
 
         protected void WaitForElementToBeVisible(By locator)
