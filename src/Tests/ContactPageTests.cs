@@ -3,7 +3,6 @@ using OpenQA.Selenium;
 using SeleniumTestFramework.src.Pages;
 using SeleniumTestFramework.src.Data;
 using SeleniumTestFramework.src.Utilities;
-using Serilog;
 using System;
 
 namespace SeleniumTestFramework.src.Tests
