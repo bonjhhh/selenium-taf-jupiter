@@ -2,9 +2,7 @@
 
 This is a Selenium-based test automation framework designed to facilitate the creation and execution of automated tests for web applications. The framework leverages NUnit for test management and Serilog for logging.
 
-## Project Structure
-
-<To be updated>
+## Project Structure [To be updated]
 
 ## Key Components
 
@@ -32,31 +30,6 @@ This is a Selenium-based test automation framework designed to facilitate the cr
 - **ConfigurationHelper.cs**: Provides methods to read configuration settings from Config.json.
 - **DriverFactory.cs**: Creates and manages WebDriver instances.
 - **TestDataGenerator.cs**: Generates random test data for use in tests.
-
-## Object-Oriented Design Principles
-
-### Single Responsibility Principle (SRP)
-
-Each class in the framework has a single responsibility:
-- **BasePage**: Manages common page interactions and WebDriverWait configuration.
-- **ContactPage**: Encapsulates interactions specific to the contact page.
-- **HomePage**: Encapsulates interactions specific to the home page.
-- **BaseTest**: Manages setup, teardown, and logging for tests.
-- **DriverFactory**: Handles WebDriver creation and management.
-- **TestDataGenerator**: Generates random test data.
-
-### Open/Closed Principle (OCP)
-
-The framework is designed to be open for extension but closed for modification:
-- New page objects can be added by extending the **BasePage** class.
-- New tests can be added by extending the **BaseTest** class.
-- Configuration settings can be extended by updating **Config.json** and **ConfigurationHelper**.
-
-### Dependency Inversion Principle (DIP)
-
-High-level modules do not depend on low-level modules; both depend on abstractions:
-- **BaseTest** depends on **DriverFactory** for WebDriver instances.
-- **BasePage** depends on **ConfigurationHelper** for WebDriverWait settings.
 
 ## Getting Started
 
