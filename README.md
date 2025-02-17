@@ -55,27 +55,20 @@ This is a Selenium-based test automation framework designed to facilitate the cr
     dotnet build
 
 4. Running All Tests:   
-```sh
-    dotnet tests
+   ```sh
+    dotnet build
 
 5. Running specific tests:
-```sh
+   ```sh
     dotnet test --filter "Name=Test_MultipleContact_ValidSubmission_SuccessMessage"
 
 6. Configuration
 
-The framework uses a Config.json file to manage WebDriver settings. The file is located in the Config directory
+The framework uses a Config.json file to manage WebDriver settings. The file is located in the Config directory. Samples:
 
 TimeoutInSeconds: Maximum time to wait for elements to be ready.
 PollingIntervalInSeconds: Frequency of checking element status.
 
-```sh
-    {
-        "WebDriver": {
-            "TimeoutInSeconds": 30,
-            "PollingIntervalInSeconds": 0.5
-        }
-    }
 
 7. Logging
 
